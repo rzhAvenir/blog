@@ -5,7 +5,7 @@ export default {
   themeConfig: {
     nav: [
       { text: 'Start', link: '/start' },
-      { text: 'Configs', link: '/configs' },
+      { text: 'Configs', link: '/config' },
       { text: 'Changelog', link: 'https://github.com/rzhAvenir/blog' },
     ],
   },
