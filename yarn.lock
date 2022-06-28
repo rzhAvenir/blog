@@ -123,12 +123,12 @@
   resolved "https://registry.npmmirror.com/@babel/parser/-/parser-7.18.5.tgz#337062363436a893a2d22faa60be5bb37091c83c"
   integrity sha512-YZWVaglMiplo7v8f1oMQ5ZPQr0vn7HPeZXxXWsxXJRjGVrzUFn9OxFQl1sb5wzfootjA/yChhW84BV+383FSOw==
 
-"@docsearch/css@3.1.0", "@docsearch/css@^3.0.0":
+"@docsearch/css@3.1.0", "@docsearch/css@^3.0.0", "@docsearch/css@^3.0.0-alpha.41":
   version "3.1.0"
   resolved "https://registry.npmmirror.com/@docsearch/css/-/css-3.1.0.tgz#6781cad43fc2e034d012ee44beddf8f93ba21f19"
   integrity sha512-bh5IskwkkodbvC0FzSg1AxMykfDl95hebEKwxNoq4e5QaGzOXSBgW8+jnMFZ7JU4sTBiB04vZWoUSzNrPboLZA==
 
-"@docsearch/js@^3.0.0":
+"@docsearch/js@^3.0.0", "@docsearch/js@^3.0.0-alpha.41":
   version "3.1.0"
   resolved "https://registry.npmmirror.com/@docsearch/js/-/js-3.1.0.tgz#f01f203885898b27fd292a215dd5b76bafa9aeb1"
   integrity sha512-5XSK+xbP0hcTIp54MECqxkWLs6kf7Ug4nWdxWNtx8cUpLiFNFnKXDxCb35wnyNpjukmrx7Q9DkO5tFFsmNVxng==
@@ -245,6 +245,26 @@
   resolved "https://registry.npmmirror.com/@vue/shared/-/shared-3.2.37.tgz#8e6adc3f2759af52f0e85863dfb0b711ecc5c702"
   integrity sha512-4rSJemR2NQIo9Klm1vabqWjD8rs/ZaJSzMxkMNeJS6lHiUjjUeYFbooN19NgFjztubEKh3WlZUeOLVdbbUWHsw==
 
+"@vue/theme@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.npmmirror.com/@vue/theme/-/theme-1.0.2.tgz#17aabafcc4275a9387663111e79a6b56cce3fca9"
+  integrity sha512-jBALidvFMLgcR76UQ2foi4yD5gHn1YrigXJglZe3Rb0rm4KRVLxPeCe/CAfD42Wsm9xAfSNDUxRneQfbQpA1eg==
+  dependencies:
+    "@docsearch/css" "^3.0.0-alpha.41"
+    "@docsearch/js" "^3.0.0-alpha.41"
+    "@vueuse/core" "^7.3.0"
+    body-scroll-lock "^3.1.5"
+    normalize.css "^8.0.1"
+    shiki "^0.9.15"
+
+"@vueuse/core@^7.3.0":
+  version "7.7.1"
+  resolved "https://registry.npmmirror.com/@vueuse/core/-/core-7.7.1.tgz#fc284f4103de73c7fb79bc06579d8066790db511"
+  integrity sha512-PRRgbATMpoeUmkCEBtUeJgOwtew8s+4UsEd+Pm7MhkjL2ihCNrSqxNVtM6NFE4uP2sWnkGcZpCjPuNSxowJ1Ow==
+  dependencies:
+    "@vueuse/shared" "7.7.1"
+    vue-demi "*"
+
 "@vueuse/core@^8.5.0":
   version "8.7.4"
   resolved "https://registry.npmmirror.com/@vueuse/core/-/core-8.7.4.tgz#39cec3e63faa8943be67121a176fbd84939c2b80"
@@ -258,6 +278,13 @@
   version "8.7.4"
   resolved "https://registry.npmmirror.com/@vueuse/metadata/-/metadata-8.7.4.tgz#211a2a095504dd34c3d8881f4b1989e67662e9f5"
   integrity sha512-CwEYS6/M6JDxk9D1mUsZq3F0VnYnf39rAxOytP58vb4BrhmPKEVfiSpvxuYcJimU9ccT/xjWhwBnsdGC2H9mIQ==
+
+"@vueuse/shared@7.7.1":
+  version "7.7.1"
+  resolved "https://registry.npmmirror.com/@vueuse/shared/-/shared-7.7.1.tgz#77e312de7275380efce86b0079bd7938791a076b"
+  integrity sha512-rN2qd22AUl7VdBxihagWyhUNHCyVk9IpvBTTfHoLH9G7rGE552X1f+zeCfehuno0zXif13jPw+icW/wn2a0rnQ==
+  dependencies:
+    vue-demi "*"
 
 "@vueuse/shared@8.7.4":
   version "8.7.4"
@@ -285,6 +312,11 @@ algoliasearch@^4.0.0:
     "@algolia/requester-common" "4.13.1"
     "@algolia/requester-node-http" "4.13.1"
     "@algolia/transporter" "4.13.1"
+
+body-scroll-lock@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.npmmirror.com/body-scroll-lock/-/body-scroll-lock-3.1.5.tgz#c1392d9217ed2c3e237fee1e910f6cdd80b7aaec"
+  integrity sha512-Yi1Xaml0EvNA0OYWxXiYNqY24AfWkbA6w5vxE7GWxtKfzIbZM+Qw+aSmkgsbWzbHiy/RCSkUZBplVxTA+E4jJg==
 
 body-scroll-lock@^4.0.0-beta.0:
   version "4.0.0-beta.0"
@@ -468,6 +500,11 @@ nanoid@^3.3.4:
   resolved "https://registry.npmmirror.com/nanoid/-/nanoid-3.3.4.tgz#730b67e3cd09e2deacf03c027c81c9d9dbc5e8ab"
   integrity sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==
 
+normalize.css@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.npmmirror.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
+  integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
+
 path-parse@^1.0.7:
   version "1.0.7"
   resolved "https://registry.npmmirror.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
@@ -517,6 +554,15 @@ shiki@^0.10.1:
     vscode-oniguruma "^1.6.1"
     vscode-textmate "5.2.0"
 
+shiki@^0.9.15:
+  version "0.9.15"
+  resolved "https://registry.npmmirror.com/shiki/-/shiki-0.9.15.tgz#2481b46155364f236651319d2c18e329ead6fa44"
+  integrity sha512-/Y0z9IzhJ8nD9nbceORCqu6NgT9X6I8Fk8c3SICHI5NbZRLdZYFaB233gwct9sU0vvSypyaL/qaKvzyQGJBZSw==
+  dependencies:
+    jsonc-parser "^3.0.0"
+    vscode-oniguruma "^1.6.1"
+    vscode-textmate "5.2.0"
+
 source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmmirror.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
@@ -549,10 +595,10 @@ vite@^2.9.7:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitepress@^1.0.0-alpha.2:
-  version "1.0.0-alpha.2"
-  resolved "https://registry.npmmirror.com/vitepress/-/vitepress-1.0.0-alpha.2.tgz#aa25845b8672efe0f0e22ff77c4b7ef09f1831a9"
-  integrity sha512-twSsmx2DI/3XgZZ8KLyRAH8RgK2Zj4kJx/kwhZhimwndYqQDrtcIaAcuV+P3FKukZ+cYtm9yt9qohz631jKx4A==
+vitepress@^1.0.0-alpha.4:
+  version "1.0.0-alpha.4"
+  resolved "https://registry.npmmirror.com/vitepress/-/vitepress-1.0.0-alpha.4.tgz#2d9929e2cade3d98f57f61848c01968fb386cee0"
+  integrity sha512-bOAA4KW6vYGlkbcrPLZLTKWTgXVroObU+o9xj9EENyEl6yg26WWvfN7DGA4BftjdM5O8nR93Z5khPQ3W/tFE7Q==
   dependencies:
     "@docsearch/css" "^3.0.0"
     "@docsearch/js" "^3.0.0"

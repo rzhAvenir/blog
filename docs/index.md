@@ -2,14 +2,10 @@
 layout: home
 
 hero:
-  name: VuePress
-  text: Vite & Vue powered static site generator.
-  tagline: Lorem ipsum...
+  name: Blog
+  text: 时间从来不语，却回答了所有问题
   actions:
     - theme: brand
-      text: Get Started
-      link: /start
-    - theme: alt
-      text: View on GitHub
-      link: https://github.com/vuejs/vitepress
+      text: 开始阅读
+      link: /front/
 ---

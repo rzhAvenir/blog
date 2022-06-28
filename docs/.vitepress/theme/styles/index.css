@@ -1,0 +1,6 @@
+.VPHome .text {
+  background: -webkit-linear-gradient(315deg, #2196f3 25%, #f44336);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
