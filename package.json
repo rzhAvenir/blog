@@ -10,8 +10,8 @@
   },
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs",
+    "docs:build": "vitepress build docs",
+    "dpcs:serve": "vitepress serve docs",
     "deploy": "bash deploy.sh"
   },
   "dependencies": {
