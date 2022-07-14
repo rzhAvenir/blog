@@ -8,7 +8,8 @@ export default {
     nav: [
       { text: '🥳前端', link: '/front/' },
       { text: '🎯算法', link: '/algorithm/' },
-      { text: '📚阅读', link: '/book/' }
+      { text: '📚阅读', link: '/book/' },
+      { text: '🎸关于我', link: '/me/' }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/rzhAvenir/blog' }
@@ -26,12 +27,22 @@ export default {
 function frontEnd() {
   return [
     {
-      text: '前端',
+      text: 'Vue.js',
       collapsible: true,
       items: [
         { text: 'Item A', link: '/front/item-a' },
         { text: 'Item B', link: '/front/item-b' }
       ]
+    },
+    {
+      text: 'Vue library',
+      collapsible: true,
+      items: [{ text: 'useAxios', link: '/front/vue-library/useAxios' }]
+    },
+    {
+      text: 'JavaScript',
+      collapsible: true,
+      items: [{ text: 'async-await', link: '/front/js/async-await' }]
     }
   ]
 }
