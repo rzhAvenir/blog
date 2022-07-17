@@ -9,7 +9,7 @@ export default {
       { text: '🥳前端', link: '/front/' },
       { text: '🎯算法', link: '/algorithm/' },
       { text: '📚阅读', link: '/book/' },
-      { text: '🎸关于我', link: '/me/' }
+      { text: '👴关于我', link: '/me/' }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/rzhAvenir/blog' }
@@ -35,9 +35,10 @@ function frontEnd() {
       ]
     },
     {
-      text: 'Vue library',
+      text: 'Library',
       collapsible: true,
-      items: [{ text: 'useAxios', link: '/front/vue-library/useAxios' }]
+      items: [{ text: 'koa', link: '/front/library/koa' },
+              { text: 'useAxios', link: '/front/library/useAxios' }]
     },
     {
       text: 'JavaScript',
