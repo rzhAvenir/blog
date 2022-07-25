@@ -5,7 +5,7 @@ export default {
   lang: 'zh-CN',
   themeConfig: {
     lastUpdated: '最后更新时间',
-    logo: '../images/sign.ico',
+    logo: '/images/sign.ico',
     nav: [
       { text: '🥳前端', link: '/front/' },
       { text: '🎯算法', link: '/algorithm/' },
@@ -23,7 +23,7 @@ export default {
       '/front/': frontEnd()
     }
   }, 
-  head: [['link', { rel: 'icon', href: '../images/sign.ico', type: 'image/ico' }]],
+  head: [['link', { rel: 'icon', href: '/images/sign.ico', type: 'image/ico' }]],
 }
 
 function frontEnd() {
