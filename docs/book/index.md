@@ -7,12 +7,12 @@
   title: '深入浅出Vue.js',
   spine: '#52B47E',
   tag: 'Vue',
-  cover: '../images/vue2.jpeg'
+  cover: '/images/vue2.jpeg'
 },{
   title: '停止你的内在战争',
   spine: '#E45D42',
   tag: '',
-  cover: '../images/stopwar.jpeg'
+  cover: '/images/stopwar.jpeg'
 }
 ]"></VirtualBook>
 
@@ -23,7 +23,7 @@
 title: '时间从来不语，却回答了所有问题',
 spine: '#E5CA9D',
 tag: '',
-cover: '../images/time.jpeg'
+cover: '/images/time.jpeg'
 }
 ]"></VirtualBook>
 
@@ -39,7 +39,7 @@ cover: '../images/time.jpeg'
 title: 'JavaScript高级程序设计',
 spine: '#9C1A31',
 tag: 'JS',
-cover: '../images/javascript.jpeg'
+cover: '/images/javascript.jpeg'
 },
 {
   title: '你不知道的JavaScript（上）',
@@ -55,21 +55,21 @@ cover: '../images/javascript.jpeg'
   title: '深入理解ES6',
   spine: '#FFFCD0',
   tag: 'ES6',
-  cover: '../images/es6.jpeg'
+  cover: '/images/es6.jpeg'
 },{
   title: 'web性能权威指南',
   spine: '#FFFFFF',
   tag: 'web',
-  cover: '../images/web.jpeg'
+  cover: '/images/web.jpeg'
 },{
   title: '深入浅出nodeJS',
   spine: '#FFFFFF',
   tag: '',
-  cover: '../images/node.jpeg'
+  cover: '/images/node.jpeg'
 },{
   title: 'JavaScript设计模式与开发实践',
   spine: '#1D4699',
   tag: '',
-  cover: '../images/jsDesign.jpeg'
+  cover: '/images/jsDesign.jpeg'
 }
 ]"></VirtualBook>

@@ -5,7 +5,7 @@ export default {
   lang: 'zh-CN',
   themeConfig: {
     lastUpdated: '最后更新时间',
-    logo: '/images/sign.ico',
+    logo: '/sign.ico',
     nav: [
       { text: '🥳前端', link: '/front/' },
       { text: '🎯算法', link: '/algorithm/' },
@@ -22,8 +22,8 @@ export default {
     sidebar: {
       '/front/': frontEnd()
     }
-  }, 
-  head: [['link', { rel: 'icon', href: '/images/sign.ico', type: 'image/ico' }]],
+  },
+  head: [['link', { rel: 'shortcut icon', href: '/blog/sign.ico' }]]
 }
 
 function frontEnd() {
@@ -37,10 +37,22 @@ function frontEnd() {
       ]
     },
     {
-      text: 'Library',
+      text: 'koa',
       collapsible: true,
-      items: [{ text: 'koa', link: '/front/library/koa' },
-              { text: 'useAxios', link: '/front/library/useAxios' }]
+      items: [{ text: 'koa', link: '/front/koa/koa' }]
+    },
+    {
+      text: 'VueUse',
+      collapsible: true,
+      items: [
+        { text: 'useAxios', link: '/front/vue-use/useAxios' },
+        { text: 'useDark', link: '/front/vue-use/useDark' }
+      ]
+    },
+    {
+      text: 'Element-Plus',
+      collapsible: true,
+      items: [{ text: 'switch', link: '/front/element-plus/switch' }]
     },
     {
       text: 'JavaScript',
