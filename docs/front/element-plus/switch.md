@@ -35,7 +35,7 @@ switch 的大致的 HTML 结构是这样的，我们知道 element-plus 整体�
 
 其中外层的 wapper 的上有一个`is-checked`样式，这是`bem`规范的状态标签，表示 switch 处于 on 或者 off 的状态，并带上一个点击事件`switchValue`，这个方法就是切换状态的方法。
 
-## 人机交互设计
+## 人机交互设计{#mutually}
 
 ```vue
 <template>
@@ -97,7 +97,7 @@ switch 的大致的 HTML 结构是这样的，我们知道 element-plus 整体�
 - ～: `p` ~ `ul` 表示每一个 ul 标签前面都有 p 标签的 ul 标签
 - focus-visible: 表示 tab 选中时的伪类选择器，和`focus`很像，它俩的区别在于用户使用键盘事件的时候，`focus`选择器中的样式并不能生效，它只作用于鼠标事件，而`focus-visible`是对于鼠标和键盘事件都是起作用的，[对比详情](https://css-tricks.com/almanac/selectors/f/focus-visible/)。
 
-## 切换按钮
+## 切换按钮{#checked-btn}
 
 ```vue
 <template>
@@ -144,7 +144,7 @@ switch 的大致的 HTML 结构是这样的，我们知道 element-plus 整体�
 
 在 action 中首先使用绝对定位，将 action 定位到 switch 的最左端，使用`border-radius：100%`将 action 变成圆块,对全部属性使用`transition`属性进行过渡处理。当按钮被激活的时候，`is-checked`状态类被触发，这时将圆块相对 switch 容器向左偏移 100%，代码块中高亮代码`margin-left`是为了处理圆块自身的宽度，这样 switch 就会从左到右带过渡动画的转换了。
 
-## 核心逻辑实现
+## 核心逻辑实现{#core}
 
 在逻辑方面首先定义了组件的名字
 
@@ -208,7 +208,7 @@ const checked = computed(() => modelValue.value === props.activeValue)
 注意是全等判断！所以官方文档里也强调了`activeValue`和`inactiveValue`的类型必须相同！但为什么类型要一定要严格相同呢？  
 实际上是有它的用途存在的，因为考虑到 switch 切换绑定值 modelValue 类型灵活性，它提供了三种类型的[格式](https://github.com/element-plus/element-plus/blob/dev/packages/components/switch/src/switch.ts#L21),那么用户在实际场景下也不会乖乖的只传 Boolean 类型的值，若用户传递的是 Number 类型的 modelValue 值，如：2，而上面两个属性默认值是 Boolean 值，那么它们就永远不可能全等！所以 checked 永远是 false！按钮的状态将永远处于 off 状态。
 
-## 用户点击时
+## 用户点击时{#click}
 
 ```js
 const switchValue = () => {
@@ -256,7 +256,7 @@ const test = (val) => {
 
 此时 switch 为 on 状态，当我点击 switch 的时候，会触发`handleChange`方法，这时 cheked.value 还是 true，所以会选中`inactiveValue`的值，它默认是 false,所以 val 的值就是 false，通过后面的`UPDATE_MODEL_EVENT`事件传递出去了，`test`方法被触发，val 的值就是刚刚 inactiveValue 的值 fasle，赋值给 data，这样这个时候 switch 中的 checked 也变成了 fasle，从而将 switch 的状态从 on 转换成 off。
 
-## beforeChange 钩子函数
+## beforeChange 钩子函数{#front-hooks}
 
 ```js{8,15,25}
 const { beforeChange } = props
@@ -292,7 +292,7 @@ if (isPromise(shouldChange)) {
 第二句高亮代码是对 Promise 的返回值进行处理，等到 beforeChange 钩子执行完毕后再执行 handleChange 切换按钮的逻辑，其方法里面还有 change 事件可以抛出执行，所以 beforeChange 可以说是一个 change 事件的**前置钩子**。  
 其后的 else if 语句块执行说明用户回调函数返回的是 Boolean 类型的值，就简单执行了一下 hanldeChange 也就达到 beforChange 的前置钩子的目的了。
 
-## 剩余 style 相关 Props
+## 剩余 style 相关 Props{#other-props}
 
 ```js
 const coreStyle =
@@ -313,7 +313,7 @@ const styles = computed(() => {
 
 官网定义了一些可直接修改的样式属性，如`width`，我也挺好奇 switch 的样式设计的，源码中 coreStyle 和 styles 都被应用在了标签的内联样式 `style` 上，这样做的目的就是为了覆盖之前定义的默认样式。 其中`CSSProperties`在[官网](https://vuejs.org/api/utility-types.html#cssproperties)中提到，是 ts 的工具类，需要`style`属性绑定更多样式。[addUnit](https://github.com/element-plus/element-plus/blob/dev/packages/utils/dom/style.ts#L77)是一个工具函数用来区分`width`props 传递的类型。
 
-## 总结
+## 总结{#summary}
 
 - 学习到了`switch`左右切换的思想
 - beforeChange 前置钩子的实现方式
