@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <img class="end" src="/blog/the-end.svg" />
+  <img class="end" src="/the-end.svg" />
 </template>
 
 <style scoped>
