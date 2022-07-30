@@ -228,7 +228,6 @@ const switchValue = () => {
 ```js{2}
 const handleChange = () => {
   const val = checked.value ? props.inactiveValue : props.activeValue
-  console.log('val', val)
   emit(UPDATE_MODEL_EVENT, val) // 帮助父组件更新modelValue的值
   emit(CHANGE_EVENT, val) // 抛出change事件，用作一些逻辑
   emit(INPUT_EVENT, val) // 抛出inptu事件，用作一些逻辑
@@ -315,10 +314,11 @@ const styles = computed(() => {
 
 ## 总结{#summary}
 
-- 学习到了`switch`左右切换的思想
+- 学习了`switch`左右切换的思想
 - beforeChange 前置钩子的实现方式
 - `activeValue`和`inactiveValue`有两个功能
   - 用来跟 modelValue 全等比较确定 checked 的值
   - 在 handleChange 中自动取反，在 emit 事件中抛出
 - CSSProperties 的使用场景
-- 学到了通过如何通过 props 自定义样式覆盖原有样式
+- 学习了如何通过 props 自定义样式覆盖原有样式
+  <TheEnd />
